@@ -13,6 +13,7 @@ namespace StoreDatabase
     public partial class WelcomePage : Form
     {
         ModifyAccountForm modAccount;
+        CustomerService cusService;
 
         public WelcomePage()
         {
@@ -28,9 +29,13 @@ namespace StoreDatabase
             modAccount.Show();
         }
 
-        private void userLogOutLLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void CustomerServLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            if (cusService == null || cusService.IsDisposed)
+            {
+                cusService = new CustomerService();
+            }
+            cusService.Show();
         }
     }
 }

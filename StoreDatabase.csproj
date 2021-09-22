@@ -72,6 +72,12 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerService.Designer.cs">
+      <DependentUpon>CustomerService.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseMgrSQLite.cs" />
     <Compile Include="GlobalData.cs" />
     <Compile Include="LoginForm.cs">
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerService.resx">
+      <DependentUpon>CustomerService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
