@@ -96,6 +96,7 @@
             this.CartLBL.TabIndex = 4;
             this.CartLBL.TabStop = true;
             this.CartLBL.Text = "Cart";
+            this.CartLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CartLBL_LinkClicked);
             // 
             // InventoryLBL
             // 
@@ -108,6 +109,7 @@
             this.InventoryLBL.TabIndex = 5;
             this.InventoryLBL.TabStop = true;
             this.InventoryLBL.Text = "Inventory";
+            this.InventoryLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.InventoryLBL_LinkClicked);
             // 
             // WelcomePage
             // 

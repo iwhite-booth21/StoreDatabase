@@ -14,6 +14,8 @@ namespace StoreDatabase
         
         //Stores the acc_Id of current logged user.
         public static string accId;
+        // Stores the Inventory information of a user
+        public static string InventoryId;
 
 
     }

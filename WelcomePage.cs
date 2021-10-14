@@ -14,6 +14,8 @@ namespace StoreDatabase
     {
         ModifyAccountForm modAccount;
         CustomerService cusService;
+        Cart userCart;
+        Select_Inventory userInventory;
 
         public WelcomePage()
         {
@@ -36,6 +38,25 @@ namespace StoreDatabase
                 cusService = new CustomerService();
             }
             cusService.Show();
+        }
+
+        private void CartLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (userCart == null || userCart.IsDisposed)
+            {
+                userCart = new Cart();
+            }
+            userCart.Show();
+
+        }
+
+        private void InventoryLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (userInventory == null || userInventory.IsDisposed)
+            {
+                userInventory = new Select_Inventory();
+            }
+            userInventory.Show();
         }
     }
 }

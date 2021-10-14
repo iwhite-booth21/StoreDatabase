@@ -66,11 +66,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccData.cs" />
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Inventory.Designer.cs">
+      <DependentUpon>Create_Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerIssue.Designer.cs">
+      <DependentUpon>CustomerIssue.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerService.cs">
       <SubType>Form</SubType>
@@ -80,6 +98,13 @@
     </Compile>
     <Compile Include="DatabaseMgrSQLite.cs" />
     <Compile Include="GlobalData.cs" />
+    <Compile Include="InventoryData.cs" />
+    <Compile Include="Select_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Inventory.Designer.cs">
+      <DependentUpon>Select_Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +117,18 @@
     <Compile Include="ModifyAccountForm.Designer.cs">
       <DependentUpon>ModifyAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyInventory.Designer.cs">
+      <DependentUpon>ModifyInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mod_Cart.Designer.cs">
+      <DependentUpon>Mod_Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WelcomePage.cs">
@@ -100,17 +137,35 @@
     <Compile Include="WelcomePage.Designer.cs">
       <DependentUpon>WelcomePage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Create_Inventory.resx">
+      <DependentUpon>Create_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerIssue.resx">
+      <DependentUpon>CustomerIssue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerService.resx">
       <DependentUpon>CustomerService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Inventory.resx">
+      <DependentUpon>Select_Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyAccountForm.resx">
       <DependentUpon>ModifyAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyInventory.resx">
+      <DependentUpon>ModifyInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mod_Cart.resx">
+      <DependentUpon>Mod_Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
