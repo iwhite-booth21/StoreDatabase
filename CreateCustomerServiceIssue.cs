@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StoreDatabase
 {
-    public partial class CustomerService : Form
+    public partial class CreateCustomerServiceIssue : Form
     {
-        public CustomerService()
+        public CreateCustomerServiceIssue()
         {
             InitializeComponent();
         }
@@ -26,5 +26,6 @@ namespace StoreDatabase
         {
 
         }
+
     }
 }

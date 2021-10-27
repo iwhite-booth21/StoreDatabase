@@ -34,6 +34,7 @@
             this.CustomerServLBL = new System.Windows.Forms.LinkLabel();
             this.CartLBL = new System.Windows.Forms.LinkLabel();
             this.InventoryLBL = new System.Windows.Forms.LinkLabel();
+            this.CreateIssueLBL = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // greetUserLBL
@@ -64,13 +65,14 @@
             // 
             this.userLogOutLLBL.AutoSize = true;
             this.userLogOutLLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLogOutLLBL.Location = new System.Drawing.Point(64, 351);
+            this.userLogOutLLBL.Location = new System.Drawing.Point(64, 410);
             this.userLogOutLLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userLogOutLLBL.Name = "userLogOutLLBL";
             this.userLogOutLLBL.Size = new System.Drawing.Size(120, 36);
             this.userLogOutLLBL.TabIndex = 2;
             this.userLogOutLLBL.TabStop = true;
             this.userLogOutLLBL.Text = "Log Out";
+            this.userLogOutLLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.userLogOutLLBL_LinkClicked);
             // 
             // CustomerServLBL
             // 
@@ -79,17 +81,17 @@
             this.CustomerServLBL.Location = new System.Drawing.Point(64, 184);
             this.CustomerServLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CustomerServLBL.Name = "CustomerServLBL";
-            this.CustomerServLBL.Size = new System.Drawing.Size(238, 36);
+            this.CustomerServLBL.Size = new System.Drawing.Size(383, 36);
             this.CustomerServLBL.TabIndex = 3;
             this.CustomerServLBL.TabStop = true;
-            this.CustomerServLBL.Text = "Customer Service";
+            this.CustomerServLBL.Text = "View Customer Service Issue";
             this.CustomerServLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CustomerServLBL_LinkClicked);
             // 
             // CartLBL
             // 
             this.CartLBL.AutoSize = true;
             this.CartLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CartLBL.Location = new System.Drawing.Point(64, 242);
+            this.CartLBL.Location = new System.Drawing.Point(64, 301);
             this.CartLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CartLBL.Name = "CartLBL";
             this.CartLBL.Size = new System.Drawing.Size(70, 36);
@@ -102,7 +104,7 @@
             // 
             this.InventoryLBL.AutoSize = true;
             this.InventoryLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventoryLBL.Location = new System.Drawing.Point(64, 296);
+            this.InventoryLBL.Location = new System.Drawing.Point(64, 355);
             this.InventoryLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.InventoryLBL.Name = "InventoryLBL";
             this.InventoryLBL.Size = new System.Drawing.Size(136, 36);
@@ -111,11 +113,25 @@
             this.InventoryLBL.Text = "Inventory";
             this.InventoryLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.InventoryLBL_LinkClicked);
             // 
+            // CreateIssueLBL
+            // 
+            this.CreateIssueLBL.AutoSize = true;
+            this.CreateIssueLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateIssueLBL.Location = new System.Drawing.Point(64, 236);
+            this.CreateIssueLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CreateIssueLBL.Name = "CreateIssueLBL";
+            this.CreateIssueLBL.Size = new System.Drawing.Size(399, 36);
+            this.CreateIssueLBL.TabIndex = 6;
+            this.CreateIssueLBL.TabStop = true;
+            this.CreateIssueLBL.Text = "Create Customer Service Issue";
+            this.CreateIssueLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateIssueLBL_LinkClicked);
+            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 416);
+            this.ClientSize = new System.Drawing.Size(946, 489);
+            this.Controls.Add(this.CreateIssueLBL);
             this.Controls.Add(this.InventoryLBL);
             this.Controls.Add(this.CartLBL);
             this.Controls.Add(this.CustomerServLBL);
@@ -138,5 +154,6 @@
         private System.Windows.Forms.LinkLabel CustomerServLBL;
         private System.Windows.Forms.LinkLabel CartLBL;
         private System.Windows.Forms.LinkLabel InventoryLBL;
+        private System.Windows.Forms.LinkLabel CreateIssueLBL;
     }
 }

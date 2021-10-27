@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace StoreDatabase
 {
-    public partial class CustomerIssue : Form
+    public partial class ModifyCustomerServiceIssue : Form
     {
-        public CustomerIssue()
+        public ModifyCustomerServiceIssue()
         {
             InitializeComponent();
-        }
-
-        private void IssueTBOX_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

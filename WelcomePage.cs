@@ -13,9 +13,11 @@ namespace StoreDatabase
     public partial class WelcomePage : Form
     {
         ModifyAccountForm modAccount;
-        CustomerService cusService;
+        CreateCustomerServiceIssue cusService;
         Cart userCart;
         Select_Inventory userInventory;
+        ViewCustomerServiceIssue viewIssue;
+
 
         public WelcomePage()
         {
@@ -33,11 +35,11 @@ namespace StoreDatabase
 
         private void CustomerServLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (cusService == null || cusService.IsDisposed)
+            if (viewIssue == null || viewIssue.IsDisposed)
             {
-                cusService = new CustomerService();
+                viewIssue = new ViewCustomerServiceIssue();
             }
-            cusService.Show();
+            viewIssue.Show();
         }
 
         private void CartLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -57,6 +59,20 @@ namespace StoreDatabase
                 userInventory = new Select_Inventory();
             }
             userInventory.Show();
+        }
+
+        private void CreateIssueLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (cusService == null || cusService.IsDisposed) 
+            {
+                cusService = new CreateCustomerServiceIssue();
+            }
+            cusService.Show();
+        }
+
+        private void userLogOutLLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

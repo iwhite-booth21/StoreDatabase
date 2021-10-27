@@ -1,7 +1,7 @@
 ﻿
 namespace StoreDatabase
 {
-    partial class CustomerIssue
+    partial class ModifyCustomerServiceIssue
     {
         /// <summary>
         /// Required designer variable.
@@ -29,48 +29,47 @@ namespace StoreDatabase
         /// </summary>
         private void InitializeComponent()
         {
-            this.IssueTBOX = new System.Windows.Forms.TextBox();
-            this.HelpMeTXT = new System.Windows.Forms.Label();
             this.CustIssue_Submit_BTN = new System.Windows.Forms.Button();
+            this.HelpMeTXT = new System.Windows.Forms.Label();
+            this.IssueTBOX = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // IssueTBOX
+            // CustIssue_Submit_BTN
             // 
-            this.IssueTBOX.Location = new System.Drawing.Point(39, 63);
-            this.IssueTBOX.Multiline = true;
-            this.IssueTBOX.Name = "IssueTBOX";
-            this.IssueTBOX.Size = new System.Drawing.Size(397, 575);
-            this.IssueTBOX.TabIndex = 2;
-            this.IssueTBOX.TextChanged += new System.EventHandler(this.IssueTBOX_TextChanged);
+            this.CustIssue_Submit_BTN.Location = new System.Drawing.Point(195, 665);
+            this.CustIssue_Submit_BTN.Name = "CustIssue_Submit_BTN";
+            this.CustIssue_Submit_BTN.Size = new System.Drawing.Size(190, 40);
+            this.CustIssue_Submit_BTN.TabIndex = 7;
+            this.CustIssue_Submit_BTN.Text = "Submit Changes";
+            this.CustIssue_Submit_BTN.UseVisualStyleBackColor = true;
             // 
             // HelpMeTXT
             // 
             this.HelpMeTXT.AutoSize = true;
-            this.HelpMeTXT.Location = new System.Drawing.Point(35, 19);
+            this.HelpMeTXT.Location = new System.Drawing.Point(109, 29);
             this.HelpMeTXT.Name = "HelpMeTXT";
             this.HelpMeTXT.Size = new System.Drawing.Size(240, 20);
-            this.HelpMeTXT.TabIndex = 3;
+            this.HelpMeTXT.TabIndex = 6;
             this.HelpMeTXT.Text = "We are dedicated to helping you,";
             // 
-            // CustIssue_Submit_BTN
+            // IssueTBOX
             // 
-            this.CustIssue_Submit_BTN.Location = new System.Drawing.Point(121, 655);
-            this.CustIssue_Submit_BTN.Name = "CustIssue_Submit_BTN";
-            this.CustIssue_Submit_BTN.Size = new System.Drawing.Size(190, 40);
-            this.CustIssue_Submit_BTN.TabIndex = 4;
-            this.CustIssue_Submit_BTN.Text = "Submit Changes";
-            this.CustIssue_Submit_BTN.UseVisualStyleBackColor = true;
+            this.IssueTBOX.Location = new System.Drawing.Point(113, 73);
+            this.IssueTBOX.Multiline = true;
+            this.IssueTBOX.Name = "IssueTBOX";
+            this.IssueTBOX.Size = new System.Drawing.Size(397, 575);
+            this.IssueTBOX.TabIndex = 5;
             // 
-            // CustomerIssue
+            // ModifyCustomerServiceIssue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 718);
+            this.ClientSize = new System.Drawing.Size(693, 734);
             this.Controls.Add(this.CustIssue_Submit_BTN);
             this.Controls.Add(this.HelpMeTXT);
             this.Controls.Add(this.IssueTBOX);
-            this.Name = "CustomerIssue";
-            this.Text = "CustomerIssue";
+            this.Name = "ModifyCustomerServiceIssue";
+            this.Text = "ModifyIssue";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,8 +77,8 @@ namespace StoreDatabase
 
         #endregion
 
-        private System.Windows.Forms.TextBox IssueTBOX;
-        private System.Windows.Forms.Label HelpMeTXT;
         private System.Windows.Forms.Button CustIssue_Submit_BTN;
+        private System.Windows.Forms.Label HelpMeTXT;
+        private System.Windows.Forms.TextBox IssueTBOX;
     }
 }

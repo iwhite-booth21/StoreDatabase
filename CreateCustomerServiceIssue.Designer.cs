@@ -1,7 +1,7 @@
 ﻿
 namespace StoreDatabase
 {
-    partial class CustomerService
+    partial class CreateCustomerServiceIssue
     {
         /// <summary>
         /// Required designer variable.

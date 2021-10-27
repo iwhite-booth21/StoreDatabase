@@ -39,7 +39,7 @@ namespace StoreDatabase
             //  Possible future for the variable may be possible.
 
             string InventorySelSql = String.Format("SELECT * from Inventory WHERE " +
-                    "InventoryId = '{0}'", GlobalData.InventoryId);
+                    "InventoryId = {0}", GlobalData.InventoryId);
 
             //Setting up Database connection with the Class
             int numRows = 0;
@@ -75,7 +75,7 @@ namespace StoreDatabase
 
             //Build SQL Insert Statement
             string InventoryInSql = String.Format("INSERT INTO Inventory(ItemType,Department,UPC,Price,InventoryId)VALUES" +
-                    "('{0}','{1}','{2}','{3}','{4}')", ItemType, Department, UPC, Price, GlobalData.InventoryId);
+                    "('{0}','{1}',{2},{3},'{4}')", ItemType, Department, UPC, Price, GlobalData.InventoryId);
 
 
             // Step 1: Check if all required fields have a value. If any values are not present, return false.
@@ -179,7 +179,7 @@ namespace StoreDatabase
             {
                 //Build SQL Update Statement
                 string InventoryUpdateSQL = String.Format("UPDATE Inventory SET " +
-                    "ItemType = '{0}',Department ='{1}' ,UPC ='{2}',Price='{3}'," +
+                    "ItemType = '{0}',Department ='{1}' ,UPC ={2},Price={3}," +
                     "WHERE InvenrtoryId = '{0}'", ItemType, Department, UPC,
                     Price, GlobalData.InventoryId);
 
@@ -206,6 +206,8 @@ namespace StoreDatabase
         }
 
         // Loads Current user account data based off accid
+        // This Area is under construction, current setup will not work for multiple inventory items
+
         public void loadItemtData()
         {
 
