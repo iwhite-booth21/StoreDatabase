@@ -110,6 +110,7 @@ namespace StoreDatabase
             this.Controls.Add(this.groupBox1);
             this.Name = "ModifyInventory";
             this.Text = "ModifyInventory";
+            this.Load += new System.EventHandler(this.ModifyInventory_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

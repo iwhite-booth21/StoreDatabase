@@ -18,6 +18,9 @@ namespace StoreDatabase
         // Stores the Inventory information of a user
         public static int InventoryId;
 
+        // Stores the User account type
+        public static string accType;
+
 
 
     }

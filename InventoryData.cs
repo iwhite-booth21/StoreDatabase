@@ -39,7 +39,7 @@ namespace StoreDatabase
             //  Possible future for the variable may be possible.
 
             string InventorySelSql = String.Format("SELECT * from Inventory WHERE " +
-                    "InventoryId = {0}", GlobalData.InventoryId);
+                    "ItemType = '{0}'", ItemType);
 
             //Setting up Database connection with the Class
             int numRows = 0;
@@ -74,8 +74,8 @@ namespace StoreDatabase
          
 
             //Build SQL Insert Statement
-            string InventoryInSql = String.Format("INSERT INTO Inventory(ItemType,Department,UPC,Price,InventoryId)VALUES" +
-                    "('{0}','{1}',{2},{3},'{4}')", ItemType, Department, UPC, Price, GlobalData.InventoryId);
+            string InventoryInSql = String.Format("INSERT INTO Inventory(ItemType,Department,UPC,Price)VALUES" +
+                    "('{0}','{1}',{2},{3})", ItemType, Department, UPC, Price);
 
 
             // Step 1: Check if all required fields have a value. If any values are not present, return false.
@@ -115,6 +115,8 @@ namespace StoreDatabase
             else if (uniqueInventoryID == false)
             {
                 MessageBox.Show("Item Exists, please create a new item");
+               
+             
                 return false;
 
             }
@@ -180,7 +182,7 @@ namespace StoreDatabase
                 //Build SQL Update Statement
                 string InventoryUpdateSQL = String.Format("UPDATE Inventory SET " +
                     "ItemType = '{0}',Department ='{1}' ,UPC ={2},Price={3}," +
-                    "WHERE InvenrtoryId = '{0}'", ItemType, Department, UPC,
+                    "WHERE InvenrtoryId = {0}", ItemType, Department, UPC,
                     Price, GlobalData.InventoryId);
 
 

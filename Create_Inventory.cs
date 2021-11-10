@@ -28,6 +28,7 @@ namespace StoreDatabase
             // Attempt to insert the inventory item
            bool Inventory_result =  ItemInfo.InsertInventoryData();
 
+
             // If result is successful, Insert Item and shpw messagebox.
             if (Inventory_result == true)
             {
@@ -37,6 +38,11 @@ namespace StoreDatabase
 
 
             }
+            else if (Inventory_result == false) 
+            {
+                MessageBox.Show("There is a critical error occuring");    
+            }
+
             else
             {
                 MessageBox.Show("Inventory Item Creation Failed, try Again");
@@ -45,8 +51,8 @@ namespace StoreDatabase
 
 
         }
-
-        private void NewInventoryCancel_BTN_Click(object sender, EventArgs e)
+      
+    private void NewInventoryCancel_BTN_Click(object sender, EventArgs e)
         {
             this.Close();
         }
