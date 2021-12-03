@@ -30,7 +30,7 @@ namespace StoreDatabase
         private void InitializeComponent()
         {
             this.HelpMeTXT = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ServRequestTBOX = new System.Windows.Forms.TextBox();
             this.submitBTN = new System.Windows.Forms.Button();
             this.CancelBTN = new System.Windows.Forms.Button();
             this.vCustServLBL = new System.Windows.Forms.LinkLabel();
@@ -46,14 +46,14 @@ namespace StoreDatabase
             this.HelpMeTXT.Text = "Please help us help you: Leave a issue in the box below";
             this.HelpMeTXT.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // ServRequestTBOX
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 53);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(397, 253);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ServRequestTBOX.Location = new System.Drawing.Point(16, 53);
+            this.ServRequestTBOX.Multiline = true;
+            this.ServRequestTBOX.Name = "ServRequestTBOX";
+            this.ServRequestTBOX.Size = new System.Drawing.Size(397, 253);
+            this.ServRequestTBOX.TabIndex = 1;
+            this.ServRequestTBOX.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // submitBTN
             // 
@@ -63,6 +63,7 @@ namespace StoreDatabase
             this.submitBTN.TabIndex = 2;
             this.submitBTN.Text = "Submit";
             this.submitBTN.UseVisualStyleBackColor = true;
+            this.submitBTN.Click += new System.EventHandler(this.submitBTN_Click);
             // 
             // CancelBTN
             // 
@@ -72,6 +73,7 @@ namespace StoreDatabase
             this.CancelBTN.TabIndex = 3;
             this.CancelBTN.Text = "Cancel";
             this.CancelBTN.UseVisualStyleBackColor = true;
+            this.CancelBTN.Click += new System.EventHandler(this.CancelBTN_Click);
             // 
             // vCustServLBL
             // 
@@ -82,8 +84,9 @@ namespace StoreDatabase
             this.vCustServLBL.TabIndex = 4;
             this.vCustServLBL.TabStop = true;
             this.vCustServLBL.Text = "View All Customer Service Issues:";
+            this.vCustServLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.vCustServLBL_LinkClicked);
             // 
-            // CustomerService
+            // CreateCustomerServiceIssue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,9 +94,9 @@ namespace StoreDatabase
             this.Controls.Add(this.vCustServLBL);
             this.Controls.Add(this.CancelBTN);
             this.Controls.Add(this.submitBTN);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ServRequestTBOX);
             this.Controls.Add(this.HelpMeTXT);
-            this.Name = "CustomerService";
+            this.Name = "CreateCustomerServiceIssue";
             this.Text = "CustomerService";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,7 +106,7 @@ namespace StoreDatabase
         #endregion
 
         private System.Windows.Forms.Label HelpMeTXT;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ServRequestTBOX;
         private System.Windows.Forms.Button submitBTN;
         private System.Windows.Forms.Button CancelBTN;
         private System.Windows.Forms.LinkLabel vCustServLBL;

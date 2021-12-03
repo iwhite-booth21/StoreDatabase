@@ -77,5 +77,15 @@ namespace StoreDatabase
         {
             this.Close();
         }
+
+        private void userInventorySubmitBTN_Click(object sender, EventArgs e)
+        {
+            // Set up a SQL insert for a cross refence table between Inventory and Cart
+
+            
+            
+            
+            // Set up a message that confirms the outcome of the SQL Statement
+        }
     }
 }

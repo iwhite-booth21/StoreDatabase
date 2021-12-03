@@ -45,6 +45,7 @@ namespace StoreDatabase
             this.userInventorySubmitBTN.TabIndex = 0;
             this.userInventorySubmitBTN.Text = "Submit";
             this.userInventorySubmitBTN.UseVisualStyleBackColor = true;
+            this.userInventorySubmitBTN.Click += new System.EventHandler(this.userInventorySubmitBTN_Click);
             // 
             // userCancelInventoryBTN
             // 

@@ -72,6 +72,7 @@ namespace StoreDatabase
             this.Controls.Add(this.viewIssueTBOX);
             this.Name = "ViewCustomerServiceIssue";
             this.Text = "ViewIssue";
+            this.Load += new System.EventHandler(this.ViewCustomerServiceIssue_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

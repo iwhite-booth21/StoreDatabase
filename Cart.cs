@@ -12,6 +12,8 @@ namespace StoreDatabase
 {
     public partial class Cart : Form
     {
+        DatabaseMgrSQLite dbMgr;
+        DataTable InvTable = new DataTable();
         public Cart()
         {
             InitializeComponent();

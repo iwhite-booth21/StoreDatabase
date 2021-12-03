@@ -12,6 +12,8 @@ namespace StoreDatabase
 {
     public partial class Create_Inventory : Form
     {
+        DatabaseMgrSQLite dbMgr;
+        DataTable InvTable = new DataTable();
         public Create_Inventory()
         {
             InitializeComponent();

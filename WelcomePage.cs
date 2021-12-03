@@ -17,12 +17,20 @@ namespace StoreDatabase
         Cart userCart;
         Select_Inventory userInventory;
         ViewCustomerServiceIssue viewIssue;
+        SelectDepartment selDept;
+        StoreTotals storetot;
+        ViewDepartment vDept;
+
+
 
 
         public WelcomePage()
         {
             InitializeComponent();
+
+         
         }
+
 
         private void userModAccLLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -54,11 +62,16 @@ namespace StoreDatabase
 
         private void InventoryLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (userInventory == null || userInventory.IsDisposed)
-            {
-                userInventory = new Select_Inventory();
-            }
-            userInventory.Show();
+              
+                MessageBox.Show("Employee User");
+
+                if (userInventory == null || userInventory.IsDisposed)
+                {
+                    userInventory = new Select_Inventory();
+                }
+                userInventory.Show();
+            
+          
         }
 
         private void CreateIssueLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -73,6 +86,34 @@ namespace StoreDatabase
         private void userLogOutLLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void DepartmentLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (selDept == null || selDept.IsDisposed)
+            {
+                selDept = new SelectDepartment();
+            }
+            selDept.Show();
+
+        }
+
+        private void TotalsLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (storetot == null || storetot.IsDisposed)
+            {
+                storetot = new StoreTotals();
+            }
+            storetot.Show();
+        }
+
+        private void vDeptLNK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (vDept == null || vDept.IsDisposed)
+            {
+                vDept = new ViewDepartment();
+            }
+            vDept.Show();
         }
     }
 }

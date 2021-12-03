@@ -21,6 +21,14 @@ namespace StoreDatabase
         // Stores the User account type
         public static string accType;
 
+        // Stores department Id
+        public static int DepartmentId;
+
+        // stores finance Id
+        public static int FinanceId;
+
+        // stores service id
+        public static int ServiceId;
 
 
     }

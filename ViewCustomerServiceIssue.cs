@@ -12,6 +12,8 @@ namespace StoreDatabase
 {
     public partial class ViewCustomerServiceIssue : Form
     {
+        DatabaseMgrSQLite dbMgr;
+        DataTable RequestTable = new DataTable();
         ModifyCustomerServiceIssue modIssue;
 
         public ViewCustomerServiceIssue()
@@ -27,5 +29,34 @@ namespace StoreDatabase
             }
             modIssue.Show();
         }
+
+        public void LoadModRequest()
+        {
+
+            // Set up a List checker.
+
+            // Use SQL String to get data
+            String LoadRequestSql = String.Format("SELECT ServiceResponse from CustomerService WHERE " +
+                "ServiceId = '{0}'", GlobalData.ServiceId);
+
+            // Make Call to DB Browser 
+            int numRows = 0;
+            RequestTable.Clear();
+            RequestTable = dbMgr.getData(LoadRequestSql, out numRows);
+
+
+            if (numRows == 1)
+            {
+                viewIssueTBOX.Text = RequestTable.Rows[0]["ServiceResponse"].ToString();
+              
+            }
+        }
+
+        private void ViewCustomerServiceIssue_Load(object sender, EventArgs e)
+        {
+            LoadModRequest();
+        }
     }
+
+
 }

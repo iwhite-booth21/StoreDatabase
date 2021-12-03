@@ -175,9 +175,10 @@ namespace StoreDatabase
 
 
             int rowsInserted = 0;
-            int x = 1;
+            
+
             // If the validation for update is true
-            if (testedItem == true && x.Equals(1))
+            if (testedItem == true)
             {
                 //Build SQL Update Statement
                 string InventoryUpdateSQL = String.Format("UPDATE Inventory SET " +
