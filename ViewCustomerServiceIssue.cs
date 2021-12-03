@@ -12,6 +12,8 @@ namespace StoreDatabase
 {
     public partial class ViewCustomerServiceIssue : Form
     {
+        DatabaseMgrSQLite dbMgr;
+        DataTable InvTable = new DataTable();
         ModifyCustomerServiceIssue modIssue;
 
         public ViewCustomerServiceIssue()

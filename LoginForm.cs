@@ -88,9 +88,6 @@ namespace StoreDatabase
                 // Set menu up based on user type
                 //  TODO - Add to global data class
                 GlobalData.accType = loginTable.Rows[0]["accType"].ToString();
-
-
-
                 wpage.Show();
 
             }

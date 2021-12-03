@@ -12,6 +12,8 @@ namespace StoreDatabase
 {
     public partial class CreateCustomerServiceIssue : Form
     {
+        DatabaseMgrSQLite dbMgr;
+        DataTable InvTable = new DataTable();
         public CreateCustomerServiceIssue()
         {
             InitializeComponent();

@@ -35,6 +35,9 @@
             this.CartLBL = new System.Windows.Forms.LinkLabel();
             this.InventoryLBL = new System.Windows.Forms.LinkLabel();
             this.CreateIssueLBL = new System.Windows.Forms.LinkLabel();
+            this.DepartmentLBL = new System.Windows.Forms.LinkLabel();
+            this.TotalsLBL = new System.Windows.Forms.LinkLabel();
+            this.vDeptLNK = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // greetUserLBL
@@ -65,7 +68,7 @@
             // 
             this.userLogOutLLBL.AutoSize = true;
             this.userLogOutLLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLogOutLLBL.Location = new System.Drawing.Point(64, 410);
+            this.userLogOutLLBL.Location = new System.Drawing.Point(64, 596);
             this.userLogOutLLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userLogOutLLBL.Name = "userLogOutLLBL";
             this.userLogOutLLBL.Size = new System.Drawing.Size(120, 36);
@@ -126,11 +129,53 @@
             this.CreateIssueLBL.Text = "Create Customer Service Issue";
             this.CreateIssueLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateIssueLBL_LinkClicked);
             // 
+            // DepartmentLBL
+            // 
+            this.DepartmentLBL.AutoSize = true;
+            this.DepartmentLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentLBL.Location = new System.Drawing.Point(64, 422);
+            this.DepartmentLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DepartmentLBL.Name = "DepartmentLBL";
+            this.DepartmentLBL.Size = new System.Drawing.Size(163, 36);
+            this.DepartmentLBL.TabIndex = 7;
+            this.DepartmentLBL.TabStop = true;
+            this.DepartmentLBL.Text = "Department";
+            this.DepartmentLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DepartmentLBL_LinkClicked);
+            // 
+            // TotalsLBL
+            // 
+            this.TotalsLBL.AutoSize = true;
+            this.TotalsLBL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalsLBL.Location = new System.Drawing.Point(64, 541);
+            this.TotalsLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalsLBL.Name = "TotalsLBL";
+            this.TotalsLBL.Size = new System.Drawing.Size(241, 36);
+            this.TotalsLBL.TabIndex = 8;
+            this.TotalsLBL.TabStop = true;
+            this.TotalsLBL.Text = "View Store Totals";
+            this.TotalsLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalsLBL_LinkClicked);
+            // 
+            // vDeptLNK
+            // 
+            this.vDeptLNK.AutoSize = true;
+            this.vDeptLNK.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vDeptLNK.Location = new System.Drawing.Point(64, 479);
+            this.vDeptLNK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.vDeptLNK.Name = "vDeptLNK";
+            this.vDeptLNK.Size = new System.Drawing.Size(325, 36);
+            this.vDeptLNK.TabIndex = 9;
+            this.vDeptLNK.TabStop = true;
+            this.vDeptLNK.Text = "View Store Departments";
+            this.vDeptLNK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.vDeptLNK_LinkClicked);
+            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 489);
+            this.ClientSize = new System.Drawing.Size(946, 688);
+            this.Controls.Add(this.vDeptLNK);
+            this.Controls.Add(this.TotalsLBL);
+            this.Controls.Add(this.DepartmentLBL);
             this.Controls.Add(this.CreateIssueLBL);
             this.Controls.Add(this.InventoryLBL);
             this.Controls.Add(this.CartLBL);
@@ -155,5 +200,8 @@
         private System.Windows.Forms.LinkLabel CartLBL;
         private System.Windows.Forms.LinkLabel InventoryLBL;
         private System.Windows.Forms.LinkLabel CreateIssueLBL;
+        private System.Windows.Forms.LinkLabel DepartmentLBL;
+        private System.Windows.Forms.LinkLabel TotalsLBL;
+        private System.Windows.Forms.LinkLabel vDeptLNK;
     }
 }

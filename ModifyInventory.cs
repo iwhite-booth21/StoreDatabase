@@ -15,6 +15,7 @@ namespace StoreDatabase
         Create_Inventory CreateInv;
         DatabaseMgrSQLite dbMgr;
         DataTable InvTable = new DataTable();
+        AdjustInventory adjInventory;
 
 
         public ModifyInventory()
@@ -71,6 +72,27 @@ namespace StoreDatabase
         private void ModifyInventory_Load(object sender, EventArgs e)
         {
             LoadInventoryItems();
+        }
+
+        private void ModifyItemLBL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (adjInventory == null || adjInventory.IsDisposed) 
+            {
+                adjInventory = new AdjustInventory();
+            }
+            adjInventory.Show();
+            this.Close();
+
+        }
+
+        private void Inventory_Mod_Cancel_BTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Submit_Changes_BTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
