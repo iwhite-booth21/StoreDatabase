@@ -52,7 +52,7 @@ namespace StoreDatabase
             //  If not unique, display a message stating account exists.
             if (numRows == 1)
             {
-                MessageBox.Show("Finance Total Exists, Try Another.");     // Can be removed
+                MessageBox.Show("Department Exists, Try Another.");     // Can be removed
                 return false;
             }
             //  If User Unique, display a message stating account generation.
